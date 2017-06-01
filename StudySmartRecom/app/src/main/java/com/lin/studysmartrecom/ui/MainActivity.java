@@ -1,7 +1,9 @@
-package com.lin.studysmartrecom;
+package com.lin.studysmartrecom.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.lin.studysmartrecom.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -4,7 +4,7 @@ import com.franmontiel.persistentcookiejar.ClearableCookieJar;
 import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
-import com.lin.studysmartrecom.MyApplication;
+import com.lin.studysmartrecom.app.MyApplication;
 
 import java.util.concurrent.TimeUnit;
 
@@ -29,7 +29,7 @@ public class HttpMethod {
     protected HttpMethod() {
         ClearableCookieJar cookieJar =
                 new PersistentCookieJar(new SetCookieCache(),
-                        new SharedPrefsCookiePersistor(MyApplication.sContext));
+                        new SharedPrefsCookiePersistor(MyApplication.getContext()));
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .cookieJar(cookieJar)
                 .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
