@@ -1,6 +1,7 @@
 package com.lin.studysmartrecom.wighet;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -17,5 +18,9 @@ public class StatusBarView extends View {
 
     public StatusBarView(Context context) {
         super(context);
+    }
+
+    public StatusBarView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
     }
 }

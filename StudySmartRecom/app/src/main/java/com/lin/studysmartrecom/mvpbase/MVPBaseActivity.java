@@ -1,8 +1,10 @@
 package com.lin.studysmartrecom.mvpbase;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 
 import com.lin.studysmartrecom.ui.base.BaseActivity;
 
@@ -33,6 +35,21 @@ public abstract class MVPBaseActivity<V extends BaseView,T extends BasePresenter
     @Override
     public Context getContext(){
         return this;
+    }
+
+    @Override
+    public Activity getActivity() {
+        return this;
+    }
+
+    @Override
+    public Bundle getBundle() {
+        return null;
+    }
+
+    @Override
+    public FragmentManager getFragmentMg() {
+        return getSupportFragmentManager();
     }
 
     public  <T> T getInstance(Object o, int i) {

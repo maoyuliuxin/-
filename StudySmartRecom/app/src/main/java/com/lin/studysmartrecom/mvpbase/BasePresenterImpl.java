@@ -5,7 +5,7 @@ package com.lin.studysmartrecom.mvpbase;
  *  邮箱 784787081@qq.com
  */
 
-public class BasePresenterImpl<V extends BaseView> implements BasePresenter<V>{
+public abstract class BasePresenterImpl<V extends BaseView> implements BasePresenter<V>{
     protected V mView;
     @Override
     public void attachView(V view) {
