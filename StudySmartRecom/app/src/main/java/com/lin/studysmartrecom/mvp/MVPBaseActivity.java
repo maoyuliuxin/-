@@ -1,4 +1,4 @@
-package com.lin.studysmartrecom.mvpbase;
+package com.lin.studysmartrecom.mvp;
 
 import android.app.Activity;
 import android.content.Context;
@@ -19,7 +19,7 @@ import java.lang.reflect.ParameterizedType;
 public abstract class MVPBaseActivity<V extends BaseView,T extends BasePresenterImpl<V>> extends BaseActivity implements BaseView{
     public T mPresenter;
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter= getInstance(this,1);
         mPresenter.attachView((V) this);

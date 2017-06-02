@@ -1,4 +1,4 @@
-package com.lin.studysmartrecom.mvpbase;
+package com.lin.studysmartrecom.mvp;
 
 import android.content.Context;
 import android.content.Intent;

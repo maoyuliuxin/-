@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 
-import com.lin.studysmartrecom.mvpbase.MVPBaseFragment;
+import com.lin.studysmartrecom.mvp.MVPBaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;

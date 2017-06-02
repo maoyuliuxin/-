@@ -26,13 +26,13 @@ public abstract class BaseActivity extends AppCompatActivity {
     private int count;//记录开启进度条的情况 只能开一个
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         doBeforeSetcontentView();
         setContentView(getLayoutId());
+        mUnbinder = ButterKnife.bind(this);
         // 默认着色状态栏
         SetStatusBarColor();
-        mUnbinder = ButterKnife.bind(this);
         mContext = this;
     }
 
